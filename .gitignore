@@ -3,3 +3,4 @@ data/s1.htm
 .env
 .vercel/
 __pycache__/
+.vercel
