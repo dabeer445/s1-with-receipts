@@ -12,7 +12,7 @@ The model may only answer with quotes. Code then checks every quote character-fo
 
 1. `scripts/parse.py` turns the EDGAR HTML (443 pages, PDF-style absolute layout) into 33 sections and ~1,000 passages, each with its heading and printed page number. Tables become `|`-separated rows. Stdlib only.
 2. `lib/s1.js` retrieves the top passages with BM25, asks Claude for JSON (`summary` + `quotes[]`), and verifies each quote.
-3. `api/ask.js` is the Vercel function; `server.js` runs the same handler locally.
+3. `api/ask.js` is the Vercel function; `dev.js` runs the same handler locally.
 4. `scripts/safety.js` pre-asks the AI-safety / agent-risk questions into `public/safety.json`.
 5. No model available (no `ANTHROPIC_API_KEY`, quota hit, API down)? The site falls back to search-only: the three closest passages, verbatim, clearly labelled as passages rather than an answer.
 

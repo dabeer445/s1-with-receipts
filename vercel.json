@@ -1,4 +1,3 @@
 {
-  "functions": { "api/ask.js": { "includeFiles": "data/sections.json", "maxDuration": 60 } },
-  "rewrites": [{ "source": "/", "destination": "/index.html" }]
+  "functions": { "api/ask.js": { "includeFiles": "data/sections.json", "maxDuration": 60 } }
 }
