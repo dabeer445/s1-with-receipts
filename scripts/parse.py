@@ -189,7 +189,7 @@ def main(src, dst):
     folded = {s['id']: s['title'] for s in sections if fin['page'] < s['page'] < part2['page']}
     for c in chunks:
         if c['sec'] in folded:
-            c['head'] = ' › '.join(filter(None, (folded[c['sec']], c['head'])))
+            c['head'] = c['head'] or folded[c['sec']]  # notes keep their own heading, not the auditor report's
             c['sec'] = fin['id']
     sections = [s for s in sections if s['id'] not in folded]
     json.dump({'sections': sections, 'chunks': chunks}, open(dst, 'w'), ensure_ascii=False)
