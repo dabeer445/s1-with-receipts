@@ -1,0 +1,15 @@
+{
+  "name": "s1-with-receipts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "node --test",
+    "parse": "python3 -I scripts/parse.py data/s1.htm data/sections.json",
+    "safety": "node scripts/safety.js"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.133.0"
+  }
+}

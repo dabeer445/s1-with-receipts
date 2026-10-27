@@ -1,0 +1,3 @@
+{
+  "functions": { "api/ask.js": { "includeFiles": "data/sections.json", "maxDuration": 60 } }
+}
