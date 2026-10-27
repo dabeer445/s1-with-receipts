@@ -1,3 +1,5 @@
 {
+  "framework": null,
+  "outputDirectory": "public",
   "functions": { "api/ask.js": { "includeFiles": "data/sections.json", "maxDuration": 60 } }
 }
